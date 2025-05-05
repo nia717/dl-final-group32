@@ -214,6 +214,7 @@ The `results.txt` file contains the average SSIM and PSNR scores across all test
     <img src="picture/head_prompt_2_4_pred.jpg" width="30%" alt="Output Image 3">
     <img src="picture/head_prompt_2_4_target.jpg" width="30%" alt="Target Image 3">
   </div>
+</div>
 <p align="center">
   <em>Examples from our evaluation dataset: input images (left), model outputs (middle), and target images (right).</em>
 </p>
