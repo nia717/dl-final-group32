@@ -1,0 +1,170 @@
+Project config
+model:
+  base_learning_rate: 5.0e-05
+  target: ldm.models.diffusion.ddpm_edit.LatentDiffusion
+  params:
+    ckpt_path: ./stable_diffusion/models/instruct-pix2pix-00-22000.ckpt
+    linear_start: 0.00085
+    linear_end: 0.012
+    num_timesteps_cond: 1
+    log_every_t: 200
+    timesteps: 1000
+    first_stage_key: edited
+    cond_stage_key: edit
+    image_size: 32
+    channels: 4
+    cond_stage_trainable: false
+    conditioning_key: hybrid
+    monitor: val/loss_simple_ema
+    scale_factor: 0.18215
+    use_ema: false
+    load_ema: false
+    scheduler_config:
+      target: ldm.lr_scheduler.LambdaLinearScheduler
+      params:
+        warm_up_steps:
+        - 0
+        cycle_lengths:
+        - 10000000000000
+        f_start:
+        - 1.0e-06
+        f_max:
+        - 1.0
+        f_min:
+        - 1.0
+    unet_config:
+      target: ldm.modules.diffusionmodules.openaimodel.UNetModel
+      params:
+        image_size: 32
+        in_channels: 8
+        out_channels: 4
+        model_channels: 320
+        attention_resolutions:
+        - 4
+        - 2
+        - 1
+        num_res_blocks: 2
+        channel_mult:
+        - 1
+        - 2
+        - 4
+        - 4
+        num_heads: 8
+        use_spatial_transformer: true
+        transformer_depth: 1
+        context_dim: 768
+        use_checkpoint: true
+        legacy: false
+    first_stage_config:
+      target: ldm.models.autoencoder.AutoencoderKL
+      params:
+        embed_dim: 4
+        monitor: val/rec_loss
+        ddconfig:
+          double_z: true
+          z_channels: 4
+          resolution: 256
+          in_channels: 3
+          out_ch: 3
+          ch: 128
+          ch_mult:
+          - 1
+          - 2
+          - 4
+          - 4
+          num_res_blocks: 2
+          attn_resolutions: []
+          dropout: 0.0
+        lossconfig:
+          target: torch.nn.Identity
+    cond_stage_config:
+      target: ldm.modules.encoders.modules.FrozenCLIPEmbedder
+data:
+  target: main.DataModuleFromConfig
+  params:
+    batch_size: 2
+    num_workers: 2
+    train:
+      target: edit_dataset.EditDataset
+      params:
+        path: ./ft_data
+        split: train
+        min_resize_res: 256
+        max_resize_res: 256
+        crop_res: 256
+        flip_prob: 0.5
+    validation:
+      target: edit_dataset.EditDataset
+      params:
+        path: ./ft_data
+        split: val
+        min_resize_res: 256
+        max_resize_res: 256
+        crop_res: 256
+
+Lightning config
+callbacks:
+  image_logger:
+    target: main.ImageLogger
+    params:
+      batch_frequency: 500
+      max_images: 2
+      increase_log_steps: false
+logger:
+  target: pytorch_lightning.loggers.WandbLogger
+  params:
+    name: train_default
+    project: dl_ft
+    log_model: false
+    save_dir: logs
+trainer:
+  max_epochs: 5
+  benchmark: true
+  accumulate_grad_batches: 4
+  check_val_every_n_epoch: 5
+  log_every_n_steps: 10
+  accelerator: ddp
+  gpus: 0,
+
+  | Name              | Type               | Params
+---------------------------------------------------------
+0 | model             | DiffusionWrapper   | 859 M
+1 | first_stage_model | AutoencoderKL      | 83.7 M
+2 | cond_stage_model  | FrozenCLIPEmbedder | 123 M
+---------------------------------------------------------
+859 M     Trainable params
+206 M     Non-trainable params
+1.1 B     Total params
+4,264.987 Total estimated model params size (MB)
+
+Epoch 4: 100%|█| 285/285 [01:51<00:00,  2.55it/s, loss=0.0792, v_num=ault, train/loss_simple_step=0.117, train/loss_vlb_step=0.00122, train/loss_step=
+/root/miniconda3/envs/ip2p/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:105: UserWarning: The dataloader, val dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 192 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/root/miniconda3/envs/ip2p/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:105: UserWarning: The dataloader, train dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 192 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/root/miniconda3/envs/ip2p/lib/python3.8/site-packages/torch/autograd/graph.py:769: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [320, 320, 1, 1], strides() = [320, 1, 320, 320]
+bucket_view.sizes() = [320, 320, 1, 1], strides() = [320, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:327.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/root/miniconda3/envs/ip2p/lib/python3.8/site-packages/pytorch_lightning/trainer/callback_hook.py:102: LightningDeprecationWarning: The signature of `Callback.on_train_epoch_end` has changed in v1.3. `outputs` parameter has been removed. Support for the old signature will be removed in v1.5
+  warning_cache.deprecation(
+Average Epoch time: 61.33 seconds
+Average Peak memory 22578.44MiB
+Average Epoch time: 51.33 seconds
+Average Peak memory 20593.70MiB
+Average Epoch time: 54.44 seconds
+Average Peak memory 20594.80MiB
+Average Epoch time: 54.67 seconds
+Average Peak memory 20594.72MiB
+                                                                                                                                                      
+Sampling t: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [00:24<00:00, 41.62it/s]
+Average Epoch time: 77.02 seconds
+Average Peak memory 20594.23MiB███████████████████████████████████████████████████████████████████████████████████▌| 996/1000 [00:23<00:00, 42.32it/s]
+Saving latest checkpoint...
+/root/miniconda3/envs/ip2p/lib/python3.8/site-packages/pytorch_lightning/trainer/deprecated_api.py:32: LightningDeprecationWarning: `Trainer.train_loop` has been renamed to `Trainer.fit_loop` and will be removed in v1.6.
+  rank_zero_deprecation(
+/root/miniconda3/envs/ip2p/lib/python3.8/site-packages/pytorch_lightning/trainer/deprecated_api.py:32: LightningDeprecationWarning: `Trainer.train_loop` has been renamed to `Trainer.fit_loop` and will be removed in v1.6.
+  rank_zero_deprecation(
+/root/miniconda3/envs/ip2p/lib/python3.8/site-packages/pytorch_lightning/core/datamodule.py:423: LightningDeprecationWarning: DataModule.setup has already been called, so it will not be called again. In v1.6 this behavior will change to always call DataModule.setup.
+  rank_zero_deprecation(
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]

@@ -1,0 +1,2 @@
+Average SSIM: 0.9926
+Average PSNR: 61.74 dB

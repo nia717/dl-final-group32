@@ -1,0 +1,223 @@
+Looking in indexes: http://mirrors.aliyun.com/pypi/simple
+Requirement already satisfied: pytorch-lightning==1.4.2 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (1.4.2)
+Requirement already satisfied: torchmetrics==0.6.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (0.6.0)
+Collecting albumentations==0.4.3
+  Downloading http://mirrors.aliyun.com/pypi/packages/f6/c4/a1e6ac237b5a27874b01900987d902fe83cc469ebdb09eb72a68c4329e78/albumentations-0.4.3.tar.gz (3.2 MB)
+Requirement already satisfied: numpy>=1.11.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from albumentations==0.4.3) (1.24.4)
+Requirement already satisfied: scipy in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from albumentations==0.4.3) (1.10.1)
+Requirement already satisfied: PyYAML in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from albumentations==0.4.3) (6.0.2)
+Collecting datasets==2.8.0
+  Downloading http://mirrors.aliyun.com/pypi/packages/24/57/6b07e4dc51479ae3e9bbc774af348b0307e2b66957ceae94d25e3f9d7dcf/datasets-2.8.0-py3-none-any.whl (452 kB)
+Requirement already satisfied: fsspec[http]>=2021.11.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from datasets==2.8.0) (2025.3.0)
+Requirement already satisfied: packaging in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from datasets==2.8.0) (25.0)
+Requirement already satisfied: tqdm>=4.62.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from datasets==2.8.0) (4.67.1)
+Requirement already satisfied: aiohttp in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from datasets==2.8.0) (3.10.11)
+Requirement already satisfied: huggingface-hub<1.0.0,>=0.2.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from datasets==2.8.0) (0.30.2)
+Requirement already satisfied: requests>=2.19.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from datasets==2.8.0) (2.32.3)
+Requirement already satisfied: pandas in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from datasets==2.8.0) (2.0.3)
+Collecting einops==0.3.0
+  Downloading http://mirrors.aliyun.com/pypi/packages/5d/a0/9935e030634bf60ecd572c775f64ace82ceddf2f504a5fd3902438f07090/einops-0.3.0-py2.py3-none-any.whl (25 kB)
+Collecting imageio==2.9.0
+  Downloading http://mirrors.aliyun.com/pypi/packages/6e/57/5d899fae74c1752f52869b613a8210a2480e1a69688e65df6cb26117d45d/imageio-2.9.0-py3-none-any.whl (3.3 MB)
+Requirement already satisfied: pillow in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from imageio==2.9.0) (10.4.0)
+Collecting imageio-ffmpeg==0.4.2
+  Downloading http://mirrors.aliyun.com/pypi/packages/df/c8/04c6b4a001b8ae7326fb83d6665af1ee58d6cc1acb421f8ea40d2678fe3c/imageio_ffmpeg-0.4.2-py3-none-manylinux2010_x86_64.whl (26.9 MB)
+Collecting kornia==0.6
+  Downloading http://mirrors.aliyun.com/pypi/packages/a9/bb/d121e3146ad4417d8ce56403b556169d2ed667e48a156e548890a3617bfd/kornia-0.6.0-py2.py3-none-any.whl (367 kB)
+Requirement already satisfied: torch>=1.8.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from kornia==0.6) (2.4.1)
+Collecting omegaconf==2.1.1
+  Downloading http://mirrors.aliyun.com/pypi/packages/66/c8/7ef11e12f3844b210add2e003abf8a0c7981ce7b5553dc630b635e7b905e/omegaconf-2.1.1-py3-none-any.whl (74 kB)
+Collecting opencv-python==4.1.2.30
+  Downloading http://mirrors.aliyun.com/pypi/packages/9c/6f/220c45977e6f85cbe63cd978c5cb774aa7c71ef9fb52b45f69c2611af010/opencv_python-4.1.2.30-cp38-cp38-manylinux1_x86_64.whl (28.3 MB)
+Collecting pudb==2019.2
+  Downloading http://mirrors.aliyun.com/pypi/packages/10/dc/a4933487ea8322336d3827c1193fff0ddd8b3a43eeda3f446f163dacc407/pudb-2019.2.tar.gz (59 kB)
+Requirement already satisfied: pygments>=1.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from pudb==2019.2) (2.19.1)
+Requirement already satisfied: tensorboard>=2.2.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from pytorch-lightning==1.4.2) (2.14.0)
+Requirement already satisfied: pyDeprecate==0.3.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from pytorch-lightning==1.4.2) (0.3.1)
+Requirement already satisfied: typing-extensions in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from pytorch-lightning==1.4.2) (4.13.2)
+Requirement already satisfied: future>=0.17.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from pytorch-lightning==1.4.2) (1.0.0)
+Collecting torch-fidelity==0.3.0
+  Downloading http://mirrors.aliyun.com/pypi/packages/9f/2c/e24c7e261eaa00fc911c39a5e30f77efbace480aae2548db9ceaef410945/torch_fidelity-0.3.0-py3-none-any.whl (37 kB)
+Requirement already satisfied: torchvision in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from torch-fidelity==0.3.0) (0.12.0)
+Collecting transformers==4.19.2
+  Downloading http://mirrors.aliyun.com/pypi/packages/52/82/b62f139e77c70fab2763d99d83a77a27a179502430851144a1765e37f5ad/transformers-4.19.2-py3-none-any.whl (4.2 MB)
+Requirement already satisfied: filelock in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from transformers==4.19.2) (3.16.1)
+Requirement already satisfied: regex!=2019.12.17 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from transformers==4.19.2) (2024.11.6)
+Collecting antlr4-python3-runtime==4.8
+  Downloading http://mirrors.aliyun.com/pypi/packages/56/02/789a0bddf9c9b31b14c3e79ec22b9656185a803dc31c15f006f9855ece0d/antlr4-python3-runtime-4.8.tar.gz (112 kB)
+Collecting dill<0.3.7
+  Downloading http://mirrors.aliyun.com/pypi/packages/be/e3/a84bf2e561beed15813080d693b4b27573262433fced9c1d1fea59e60553/dill-0.3.6-py3-none-any.whl (110 kB)
+Requirement already satisfied: multidict<7.0,>=4.5 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from aiohttp->datasets==2.8.0) (6.1.0)
+Requirement already satisfied: aiosignal>=1.1.2 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from aiohttp->datasets==2.8.0) (1.3.1)
+Requirement already satisfied: yarl<2.0,>=1.12.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from aiohttp->datasets==2.8.0) (1.15.2)
+Requirement already satisfied: async-timeout<6.0,>=4.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from aiohttp->datasets==2.8.0) (5.0.1)
+Requirement already satisfied: attrs>=17.3.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from aiohttp->datasets==2.8.0) (25.3.0)
+Requirement already satisfied: frozenlist>=1.1.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from aiohttp->datasets==2.8.0) (1.5.0)
+Requirement already satisfied: aiohappyeyeballs>=2.3.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from aiohttp->datasets==2.8.0) (2.4.4)
+Collecting imgaug<0.2.7,>=0.2.5
+  Downloading http://mirrors.aliyun.com/pypi/packages/ad/2e/748dbb7bb52ec8667098bae9b585f448569ae520031932687761165419a2/imgaug-0.2.6.tar.gz (631 kB)
+Requirement already satisfied: scikit-image>=0.11.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from imgaug<0.2.7,>=0.2.5->albumentations==0.4.3) (0.21.0)
+Requirement already satisfied: six in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from imgaug<0.2.7,>=0.2.5->albumentations==0.4.3) (1.16.0)
+Collecting opencv-python-headless>=4.1.1
+  Downloading http://mirrors.aliyun.com/pypi/packages/dd/5c/c139a7876099916879609372bfa513b7f1257f7f1a908b0bdc1c2328241b/opencv_python_headless-4.11.0.86-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (50.0 MB)
+Collecting pyarrow>=6.0.0
+  Downloading http://mirrors.aliyun.com/pypi/packages/e6/c1/4c6bcdf7a820034aa91a8b4d25fef38809be79b42ca7aaa16d4680b0bbac/pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)
+Requirement already satisfied: certifi>=2017.4.17 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from requests>=2.19.0->datasets==2.8.0) (2020.6.20)
+Requirement already satisfied: charset-normalizer<4,>=2 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from requests>=2.19.0->datasets==2.8.0) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from requests>=2.19.0->datasets==2.8.0) (3.7)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from requests>=2.19.0->datasets==2.8.0) (2.2.3)
+Collecting responses<0.19
+  Downloading http://mirrors.aliyun.com/pypi/packages/79/f3/2b3a6dc5986303b3dd1bbbcf482022acb2583c428cd23f0b6d37b1a1a519/responses-0.18.0-py3-none-any.whl (38 kB)
+Requirement already satisfied: lazy_loader>=0.2 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from scikit-image>=0.11.0->imgaug<0.2.7,>=0.2.5->albumentations==0.4.3) (0.4)
+Requirement already satisfied: networkx>=2.8 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from scikit-image>=0.11.0->imgaug<0.2.7,>=0.2.5->albumentations==0.4.3) (3.1)
+Collecting scikit-image>=0.11.0
+  Downloading http://mirrors.aliyun.com/pypi/packages/54/0f/c50440b496cd3e2d81f4760171ca5e536185b6c3fcfe22b2fc50156f8a31/scikit_image-0.20.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.4 MB)
+Requirement already satisfied: tifffile>=2019.7.26 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from scikit-image>=0.11.0->imgaug<0.2.7,>=0.2.5->albumentations==0.4.3) (2023.7.10)
+Requirement already satisfied: PyWavelets>=1.1.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from scikit-image>=0.11.0->imgaug<0.2.7,>=0.2.5->albumentations==0.4.3) (1.4.1)
+Collecting scipy
+  Downloading http://mirrors.aliyun.com/pypi/packages/6f/7c/aa0abf51b2f68b97135e5a25938c4040a718a181b8d4602d0e2df3915e5a/scipy-1.9.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (43.4 MB)
+Requirement already satisfied: markdown>=2.6.8 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from tensorboard>=2.2.0->pytorch-lightning==1.4.2) (3.7)
+Requirement already satisfied: wheel>=0.26 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from tensorboard>=2.2.0->pytorch-lightning==1.4.2) (0.44.0)
+Requirement already satisfied: grpcio>=1.48.2 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from tensorboard>=2.2.0->pytorch-lightning==1.4.2) (1.70.0)
+Requirement already satisfied: setuptools>=41.0.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from tensorboard>=2.2.0->pytorch-lightning==1.4.2) (75.1.0)
+Requirement already satisfied: absl-py>=0.4 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from tensorboard>=2.2.0->pytorch-lightning==1.4.2) (2.2.2)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from tensorboard>=2.2.0->pytorch-lightning==1.4.2) (0.7.2)
+Requirement already satisfied: google-auth<3,>=1.6.3 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from tensorboard>=2.2.0->pytorch-lightning==1.4.2) (2.39.0)
+Requirement already satisfied: werkzeug>=1.0.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from tensorboard>=2.2.0->pytorch-lightning==1.4.2) (3.0.6)
+Requirement already satisfied: google-auth-oauthlib<1.1,>=0.5 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from tensorboard>=2.2.0->pytorch-lightning==1.4.2) (1.0.0)
+Requirement already satisfied: protobuf>=3.19.6 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from tensorboard>=2.2.0->pytorch-lightning==1.4.2) (5.29.4)
+Requirement already satisfied: cachetools<6.0,>=2.0.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from google-auth<3,>=1.6.3->tensorboard>=2.2.0->pytorch-lightning==1.4.2) (5.5.2)
+Requirement already satisfied: rsa<5,>=3.1.4 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from google-auth<3,>=1.6.3->tensorboard>=2.2.0->pytorch-lightning==1.4.2) (4.9.1)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from google-auth<3,>=1.6.3->tensorboard>=2.2.0->pytorch-lightning==1.4.2) (0.4.2)
+Requirement already satisfied: requests-oauthlib>=0.7.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from google-auth-oauthlib<1.1,>=0.5->tensorboard>=2.2.0->pytorch-lightning==1.4.2) (2.0.0)
+Requirement already satisfied: importlib-metadata>=4.4 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from markdown>=2.6.8->tensorboard>=2.2.0->pytorch-lightning==1.4.2) (8.5.0)
+Requirement already satisfied: zipp>=3.20 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from importlib-metadata>=4.4->markdown>=2.6.8->tensorboard>=2.2.0->pytorch-lightning==1.4.2) (3.20.2)
+Requirement already satisfied: pyasn1<0.7.0,>=0.6.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from pyasn1-modules>=0.2.1->google-auth<3,>=1.6.3->tensorboard>=2.2.0->pytorch-lightning==1.4.2) (0.6.1)
+Requirement already satisfied: oauthlib>=3.0.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from requests-oauthlib>=0.7.0->google-auth-oauthlib<1.1,>=0.5->tensorboard>=2.2.0->pytorch-lightning==1.4.2) (3.2.2)
+Collecting tokenizers!=0.11.3,<0.13,>=0.11.1
+  Downloading http://mirrors.aliyun.com/pypi/packages/36/fa/e22ebbcaeecd9bd04efa30f7ec43ccf1501c97615c9af3bbf13a77ce0b81/tokenizers-0.12.1-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (6.6 MB)
+Requirement already satisfied: nvidia-cusparse-cu12==12.1.0.106 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from torch>=1.8.1->kornia==0.6) (12.1.0.106)
+Requirement already satisfied: nvidia-nccl-cu12==2.20.5 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from torch>=1.8.1->kornia==0.6) (2.20.5)
+Requirement already satisfied: triton==3.0.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from torch>=1.8.1->kornia==0.6) (3.0.0)
+Requirement already satisfied: nvidia-cudnn-cu12==9.1.0.70 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from torch>=1.8.1->kornia==0.6) (9.1.0.70)
+Requirement already satisfied: nvidia-cublas-cu12==12.1.3.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from torch>=1.8.1->kornia==0.6) (12.1.3.1)
+Requirement already satisfied: nvidia-nvtx-cu12==12.1.105 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from torch>=1.8.1->kornia==0.6) (12.1.105)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.1.105 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from torch>=1.8.1->kornia==0.6) (12.1.105)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.1.105 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from torch>=1.8.1->kornia==0.6) (12.1.105)
+Requirement already satisfied: nvidia-cusolver-cu12==11.4.5.107 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from torch>=1.8.1->kornia==0.6) (11.4.5.107)
+Requirement already satisfied: nvidia-cufft-cu12==11.0.2.54 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from torch>=1.8.1->kornia==0.6) (11.0.2.54)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.1.105 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from torch>=1.8.1->kornia==0.6) (12.1.105)
+Requirement already satisfied: nvidia-curand-cu12==10.3.2.106 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from torch>=1.8.1->kornia==0.6) (10.3.2.106)
+Requirement already satisfied: sympy in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from torch>=1.8.1->kornia==0.6) (1.13.3)
+Requirement already satisfied: jinja2 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from torch>=1.8.1->kornia==0.6) (3.1.6)
+Requirement already satisfied: nvidia-nvjitlink-cu12 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from nvidia-cusolver-cu12==11.4.5.107->torch>=1.8.1->kornia==0.6) (12.9.41)
+Collecting urwid>=1.1.1
+  Downloading http://mirrors.aliyun.com/pypi/packages/54/cb/271a4f5a1bf4208dbdc96d85b9eae744cf4e5e11ac73eda76dc98c8fd2d7/urwid-2.6.16-py3-none-any.whl (297 kB)
+Requirement already satisfied: wcwidth in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from urwid>=1.1.1->pudb==2019.2) (0.2.13)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from werkzeug>=1.0.1->tensorboard>=2.2.0->pytorch-lightning==1.4.2) (2.1.5)
+Requirement already satisfied: propcache>=0.2.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from yarl<2.0,>=1.12.0->aiohttp->datasets==2.8.0) (0.2.0)
+Collecting diffusers
+  Downloading http://mirrors.aliyun.com/pypi/packages/e7/7a/f08f610cea8a3395ad3b4f586db23bedb43c68db6c3261145a15e7b63126/diffusers-0.33.1-py3-none-any.whl (3.6 MB)
+Requirement already satisfied: safetensors>=0.3.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from diffusers) (0.5.3)
+Collecting invisible-watermark
+  Downloading http://mirrors.aliyun.com/pypi/packages/2b/57/18b5a914f6d7994dd349252873169e946dc824328e9a37fd15ed836deedc/invisible_watermark-0.2.0-py3-none-any.whl (1.6 MB)
+Collecting streamlit
+  Downloading http://mirrors.aliyun.com/pypi/packages/9a/14/857d0734989f3d26f2f965b2e3f67568ea7a6e8a60cb9c1ed7f774b6d606/streamlit-1.40.1-py2.py3-none-any.whl (8.6 MB)
+Requirement already satisfied: gitpython!=3.1.19,<4,>=3.0.7 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from streamlit) (3.1.44)
+Requirement already satisfied: click<9,>=7.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from streamlit) (8.1.8)
+Collecting altair<6,>=4.0
+  Downloading http://mirrors.aliyun.com/pypi/packages/9b/52/4a86a4fa1cc2aae79137cc9510b7080c3e5aede2310d14fae5486feec7f7/altair-5.4.1-py3-none-any.whl (658 kB)
+Requirement already satisfied: jsonschema>=3.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from altair<6,>=4.0->streamlit) (4.23.0)
+Collecting blinker<2,>=1.0.0
+  Downloading http://mirrors.aliyun.com/pypi/packages/bb/2a/10164ed1f31196a2f7f3799368a821765c62851ead0e630ab52b8e14b4d0/blinker-1.8.2-py3-none-any.whl (9.5 kB)
+Requirement already satisfied: gitdb<5,>=4.0.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from gitpython!=3.1.19,<4,>=3.0.7->streamlit) (4.0.12)
+Requirement already satisfied: smmap<6,>=3.0.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from gitdb<5,>=4.0.1->gitpython!=3.1.19,<4,>=3.0.7->streamlit) (5.0.2)
+Requirement already satisfied: pkgutil-resolve-name>=1.3.10 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from jsonschema>=3.0->altair<6,>=4.0->streamlit) (1.3.10)
+Requirement already satisfied: referencing>=0.28.4 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from jsonschema>=3.0->altair<6,>=4.0->streamlit) (0.35.1)
+Requirement already satisfied: rpds-py>=0.7.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from jsonschema>=3.0->altair<6,>=4.0->streamlit) (0.20.1)
+Requirement already satisfied: importlib-resources>=1.4.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from jsonschema>=3.0->altair<6,>=4.0->streamlit) (6.4.5)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from jsonschema>=3.0->altair<6,>=4.0->streamlit) (2023.12.1)
+Collecting narwhals>=1.5.2
+  Downloading http://mirrors.aliyun.com/pypi/packages/b1/e3/79d95ed89f46b134dd801b54375e362c505303bd739a6737efc14d0de835/narwhals-1.37.1-py3-none-any.whl (332 kB)
+Collecting packaging
+  Downloading http://mirrors.aliyun.com/pypi/packages/88/ef/eb23f262cca3c0c4eb7ab1933c3b1f03d021f2c48f54763065b6f0e321be/packaging-24.2-py3-none-any.whl (65 kB)
+Requirement already satisfied: pytz>=2020.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from pandas->datasets==2.8.0) (2025.2)
+Requirement already satisfied: python-dateutil>=2.8.2 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from pandas->datasets==2.8.0) (2.9.0.post0)
+Requirement already satisfied: tzdata>=2022.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from pandas->datasets==2.8.0) (2025.2)
+Collecting pydeck<1,>=0.8.0b4
+  Downloading http://mirrors.aliyun.com/pypi/packages/ab/4c/b888e6cf58bd9db9c93f40d1c6be8283ff49d88919231afe93a6bcf61626/pydeck-0.9.1-py2.py3-none-any.whl (6.9 MB)
+Collecting rich<14,>=10.14.0
+  Downloading http://mirrors.aliyun.com/pypi/packages/19/71/39c7c0d87f8d4e6c020a393182060eaefeeae6c01dab6a84ec346f2567df/rich-13.9.4-py3-none-any.whl (242 kB)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from rich<14,>=10.14.0->streamlit) (3.0.0)
+Requirement already satisfied: mdurl~=0.1 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from markdown-it-py>=2.2.0->rich<14,>=10.14.0->streamlit) (0.1.2)
+Collecting tenacity<10,>=8.1.0
+  Downloading http://mirrors.aliyun.com/pypi/packages/b6/cb/b86984bed139586d01532a587464b5805f12e397594f19f931c4c2fbfa61/tenacity-9.0.0-py3-none-any.whl (28 kB)
+Collecting toml<2,>=0.10.1
+  Downloading http://mirrors.aliyun.com/pypi/packages/44/6f/7120676b6d73228c96e17f1f794d8ab046fc910d781c8d151120c3f1569e/toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Collecting tornado<7,>=6.0.3
+  Downloading http://mirrors.aliyun.com/pypi/packages/22/55/b78a464de78051a30599ceb6983b01d8f732e6f69bf37b4ed07f642ac0fc/tornado-6.4.2-cp38-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (437 kB)
+Collecting watchdog<7,>=2.1.5
+  Downloading http://mirrors.aliyun.com/pypi/packages/01/d2/c8931ff840a7e5bd5dcb93f2bb2a1fd18faf8312e9f7f53ff1cf76ecc8ed/watchdog-4.0.2-py3-none-manylinux2014_x86_64.whl (82 kB)
+Collecting test-tube
+  Downloading http://mirrors.aliyun.com/pypi/packages/91/f0/5c32f2fbd824f32354f7f4632c957163071597bb2c6a4105f507bc9af7c0/test_tube-0.7.5.tar.gz (21 kB)
+Collecting multiprocess
+  Downloading http://mirrors.aliyun.com/pypi/packages/3b/c3/ca84c19bd14cdfc21c388fdcebf08b86a7a470ebc9f5c3c084fc2dbc50f7/multiprocess-0.70.18-py38-none-any.whl (132 kB)
+  Downloading http://mirrors.aliyun.com/pypi/packages/ae/d7/fd7a092fc0ab1845a1a97ca88e61b9b7cc2e9d6fcf0ed24e9480590c2336/multiprocess-0.70.17-py38-none-any.whl (132 kB)
+  Downloading http://mirrors.aliyun.com/pypi/packages/ea/89/38df130f2c799090c978b366cfdf5b96d08de5b29a4a293df7f7429fa50b/multiprocess-0.70.16-py38-none-any.whl (132 kB)
+  Downloading http://mirrors.aliyun.com/pypi/packages/c2/a6/c5cb599d917904878f220a4dbdfdcc4ef291dd3956c35b3b0dc6fc42fb6d/multiprocess-0.70.15-py38-none-any.whl (132 kB)
+  Downloading http://mirrors.aliyun.com/pypi/packages/13/95/8b875a678c6f9db81809dd5d6032e9f8628426e37f6aa6b7d404ba582de1/multiprocess-0.70.14-py38-none-any.whl (132 kB)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /root/miniconda3/envs/ip2p/lib/python3.8/site-packages (from sympy->torch>=1.8.1->kornia==0.6) (1.3.0)
+Collecting xxhash
+  Downloading http://mirrors.aliyun.com/pypi/packages/62/f1/0d1bb3518dbcf4424c5d3e0b259d742e50a51753036799e8a6f1714e4fb9/xxhash-3.5.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (194 kB)
+Building wheels for collected packages: albumentations, pudb, antlr4-python3-runtime, imgaug, test-tube
+  Building wheel for albumentations (setup.py): started
+  Building wheel for albumentations (setup.py): finished with status 'done'
+  Created wheel for albumentations: filename=albumentations-0.4.3-py3-none-any.whl size=60761 sha256=9faceffef8dd18d98edeea59d1fddf7f5dca33f25194565979faca99aacd2202
+  Stored in directory: /root/.cache/pip/wheels/b8/f9/b4/7a2c09d86ac3382eceb880fb4615e8bbf451190fd7c3e03307
+  Building wheel for pudb (setup.py): started
+  Building wheel for pudb (setup.py): finished with status 'done'
+  Created wheel for pudb: filename=pudb-2019.2-py3-none-any.whl size=63213 sha256=ca5c9f123ed1a788a9959b7c3aa94cdce0db57abdf036d36017288a45cd7e73f
+  Stored in directory: /root/.cache/pip/wheels/94/86/7f/7047a519bf882d143a4dee06bdb56cf651c9387e5702089e55
+  Building wheel for antlr4-python3-runtime (setup.py): started
+  Building wheel for antlr4-python3-runtime (setup.py): finished with status 'done'
+  Created wheel for antlr4-python3-runtime: filename=antlr4_python3_runtime-4.8-py3-none-any.whl size=141214 sha256=f47856a08345664792ffec11390ee1c6748e38425fceeb7f6e08493680bf6a5b
+  Stored in directory: /root/.cache/pip/wheels/84/c8/1d/50fa2a363062ce625b47af89c410bd77f339f1d59682c091c9
+  Building wheel for imgaug (setup.py): started
+  Building wheel for imgaug (setup.py): finished with status 'done'
+  Created wheel for imgaug: filename=imgaug-0.2.6-py3-none-any.whl size=654004 sha256=6531bbdd60b8ce647c8dcb37fd94aaa2b607676a28a85fc59b8ed6f8ca4555ea
+  Stored in directory: /root/.cache/pip/wheels/00/5e/87/0b5eab2c465859efece86ccc9966d01a57dc74a76e81cda294
+  Building wheel for test-tube (setup.py): started
+  Building wheel for test-tube (setup.py): finished with status 'done'
+  Created wheel for test-tube: filename=test_tube-0.7.5-py3-none-any.whl size=25325 sha256=583c747542324ebc34e8d848103624c3902080486e1262675f77359897909517
+  Stored in directory: /root/.cache/pip/wheels/d6/d3/41/034dc5cfbe11e8e7a82e2ca966ce844d0a1286a0c2cc115c6d
+Successfully built albumentations pudb antlr4-python3-runtime imgaug test-tube
+Installing collected packages: packaging, scipy, imageio, scikit-image, narwhals, dill, xxhash, watchdog, urwid, tornado, toml, tokenizers, tenacity, rich, responses, pydeck, pyarrow, opencv-python-headless, opencv-python, multiprocess, imgaug, blinker, antlr4-python3-runtime, altair, transformers, torch-fidelity, test-tube, streamlit, pudb, omegaconf, kornia, invisible-watermark, imageio-ffmpeg, einops, diffusers, datasets, albumentations
+  Attempting uninstall: packaging
+    Found existing installation: packaging 25.0
+    Uninstalling packaging-25.0:
+      Successfully uninstalled packaging-25.0
+  Attempting uninstall: scipy
+    Found existing installation: scipy 1.10.1
+    Uninstalling scipy-1.10.1:
+      Successfully uninstalled scipy-1.10.1
+  Attempting uninstall: imageio
+    Found existing installation: imageio 2.35.1
+    Uninstalling imageio-2.35.1:
+      Successfully uninstalled imageio-2.35.1
+  Attempting uninstall: scikit-image
+    Found existing installation: scikit-image 0.21.0
+    Uninstalling scikit-image-0.21.0:
+      Successfully uninstalled scikit-image-0.21.0
+  Attempting uninstall: rich
+    Found existing installation: rich 14.0.0
+    Uninstalling rich-14.0.0:
+      Successfully uninstalled rich-14.0.0
+  Attempting uninstall: kornia
+    Found existing installation: kornia 0.7.3
+    Uninstalling kornia-0.7.3:
+      Successfully uninstalled kornia-0.7.3
+  Attempting uninstall: einops
+    Found existing installation: einops 0.8.1
+    Uninstalling einops-0.8.1:
+      Successfully uninstalled einops-0.8.1
+Successfully installed albumentations-0.4.3 altair-5.4.1 antlr4-python3-runtime-4.8 blinker-1.8.2 datasets-2.8.0 diffusers-0.33.1 dill-0.3.6 einops-0.3.0 imageio-2.9.0 imageio-ffmpeg-0.4.2 imgaug-0.2.6 invisible-watermark-0.2.0 kornia-0.6.0 multiprocess-0.70.14 narwhals-1.37.1 omegaconf-2.1.1 opencv-python-4.1.2.30 opencv-python-headless-4.11.0.86 packaging-24.2 pudb-2019.2 pyarrow-17.0.0 pydeck-0.9.1 responses-0.18.0 rich-13.9.4 scikit-image-0.20.0 scipy-1.9.1 streamlit-1.40.1 tenacity-9.0.0 test-tube-0.7.5 tokenizers-0.12.1 toml-0.10.2 torch-fidelity-0.3.0 tornado-6.4.2 transformers-4.19.2 urwid-2.6.16 watchdog-4.0.2 xxhash-3.5.0

@@ -1,0 +1,23 @@
+lightning:
+  callbacks:
+    image_logger:
+      target: main.ImageLogger
+      params:
+        batch_frequency: 500
+        max_images: 2
+        increase_log_steps: false
+  logger:
+    target: pytorch_lightning.loggers.WandbLogger
+    params:
+      name: train_default
+      project: dl_ft
+      log_model: false
+      save_dir: logs
+  trainer:
+    max_epochs: 5
+    benchmark: true
+    accumulate_grad_batches: 4
+    check_val_every_n_epoch: 5
+    log_every_n_steps: 10
+    accelerator: ddp
+    gpus: 0,
