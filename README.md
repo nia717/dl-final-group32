@@ -178,7 +178,7 @@ python eval.py --data_dir path/to/your/eval_data --checkpoint_path path/to/your/
 
 For example, our command is:
 ```bash
-python eval.py --data_dir ./ft_data --checkpoint_path ./logs/train_default/checkpoints/last.ckpt --config_path ./logs/train_default/configs/2025-05-04T22-16-01-project.yaml --output_dir ./logs/predictions
+python eval.py --data_dir ./eval_data --checkpoint_path ./logs/train_default/checkpoints/last.ckpt --config_path ./logs/train_default/configs/2025-05-04T22-16-01-project.yaml --output_dir ./predictions
 ```
 
 ### Evaluation Results Location
